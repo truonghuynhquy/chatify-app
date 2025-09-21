@@ -1,0 +1,24 @@
+version: "3.9"
+
+service:
+  mongo:
+    image: mongo:latest
+    container_name: chatify-mongo
+    ports:
+      - "27017:27017"
+    enviroment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    volumnes:
+      - ./mongo-data:/data/db
+
+  backend:
+    build:
+      context: ./backend
+      container_name: chatify-backend
+      ports:
+        - "3000:3000"
+      depends_on:
+        - mongo
+      enviroment:
+        MONGO_URI: "mongodb://admin:admin123@mongo:27017/chatify-app?authSource=admin"
