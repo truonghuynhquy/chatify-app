@@ -6,3 +6,6 @@ dist/
 # Logs
 npm-debug.log
 yarn-error.log
+
+# Exclude data MongoDB
+mongo-data/
