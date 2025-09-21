@@ -24,4 +24,4 @@ services:
       MONGO_URI: "mongodb://admin:admin123@mongo:27017/chatify-app?authSource=admin"
 
 volumes:
-  mongo-data
+  mongo_data: {} # mapping empty
