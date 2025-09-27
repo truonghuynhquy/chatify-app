@@ -17,7 +17,7 @@ async function bootstrap() {
 
   await app.listen(process.env.PORT ?? 3000);
   Logger.log(
-    `🚀 App đang chạy ở http://localhost:${process.env.PORT || 3000}`,
+    `🚀 App is running ở http://localhost:${process.env.PORT || 3000}`,
     'Bootstrap',
   );
 }

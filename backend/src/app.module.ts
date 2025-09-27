@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './module/auth/auth.module';
 import { MessagesModule } from './module/messages/messages.module';
+import { DatabaseModule } from './config/database.config';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { MessagesModule } from './module/messages/messages.module';
       isGlobal: true,
       envFilePath: `.env`,
     }),
+    DatabaseModule,
     AuthModule,
     MessagesModule,
   ],
