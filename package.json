@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "<h1 align=\"center\">✨ Full-Stack Chat App with Auth & Emails ✨</h1>",
   "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
