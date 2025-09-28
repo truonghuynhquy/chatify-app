@@ -4,7 +4,7 @@ import { UpdateMessageDto } from './dto/update-message.dto';
 
 @Injectable()
 export class MessagesService {
-  send(){
-      return 'Sending...';
+  send() {
+    return 'Sending...';
   }
 }
